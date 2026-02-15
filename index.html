@@ -1,110 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gianmaria Scorza</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type="text/css">
-        html, body, .container {
-            height: 100%;
-            margin: 0;
-        }   
-		body {
-			font-family: 'PT Serif', Georgia, serif;
-            height: 100%;
-		}
-        img {
-            border-radius: 50%;
-        }
-        #container  {
-            text-align: center;
-            align-items: center;
-            position: absolute;
-            top: 15%;
-            left: 0;
-            right: 0;
-    
-        }
-        #pic {
-            text-align: right;
-            width: 45%;
-            padding-left: 5%;
-            float: left;
-        }
-        #socialbox {
-            width: 45%;
-            padding-left: 5%;
-            text-align:left;
-            float: left;
-        }
-        a:link { color: #000000; }
-		a:visited { color: #000000; }
-		a:hover { color: #000000; }
-		a:active { color: #000000; }
-        .socialboxelement {
-            text-align: left;
-        }
-        .socialboxelementspan {
-            padding-left: 5px;
-        }
-        #bottom {
-            width: 100%;
-            text-align: center;
-            align-items: center;
-            padding-top: 20px;
-        }
-        .bottomelment {
-            width: 100%;
-            text-align: center;
-            float:right;
-        }
-    </style>
-</head>
-<body>
-    <div id="container">
-        <div>
-            <div>
-                <h1>Gianmaria Scorza</h1>
-                <p style="padding-bottom: 20px;">Computer Scientist</p>
-            </div>
-            <div id="pic">
-                <img src="pic.jpg" alt="pic" width="180px">
-            </div>
-            <div id="socialbox">
-                <p class="socialboxelement">
-                    <i class="fa fa-github" aria-hidden="true"></i>
-                    <a href="https://github.com/giamma1295">
-                        <span class="socialboxelementspan">Github</span>
-                    </a>
-                </p>
-                <p class="socialboxelement">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    <a href="https://www.linkedin.com/in/gianmaria-scorza/">
-                        <span class="socialboxelementspan">Linkedin</span>
-                    </a>
-                </p>
-                <p class="socialboxelement">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                    <a href="https://twitter.com/Scogiam95">
-                        <span class="socialboxelementspan">Twitter</span>
-                    </a>    
-                </p>
-                <p class="socialboxelement">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <a href="mailto:gianmaria@scorza.dev">
-                        <span class="socialboxelementspan">Mail</span>
-                    </a>
-                </p>
-                <br>
-            </div>
-            <div id="bottom">
-                <p class="bottomelment">Software Engineer @ <a href="https://www.pagopa.it/">PagoPa Spa</a></p>
-                <p class="bottomelment">Bsc Computer Science Summa Cum Laude @ Unime(ITA)</p>
-                <p class="bottomelment">Erasmus Student  @ Univerza na Primorkem(SLO)</p>
-            </div>
-        </div>
+<!doctype html>
+<html lang="it" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title id="page-title">Gianmaria Scorza | Backend Engineer</title>
+    <meta name="description" id="meta-description" content="" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- CSS esterno -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- OpenGraph / Social Sharing -->
+    <meta property="og:title" content="Gianmaria Scorza | Backend Engineer" />
+    <meta
+      property="og:description"
+      content="Backend Engineer specializzato in architetture scalabili, sistemi distribuiti e cloud engineering."
+    />
+    <meta property="og:image" content="assets/profile.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://giamma1295.github.io/" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gianmaria Scorza | Backend Engineer" />
+    <meta
+      name="twitter:description"
+      content="Backend Engineer specializzato in architetture scalabili, sistemi distribuiti e cloud engineering."
+    />
+    <meta name="twitter:image" content="assets/profile.jpg" />
+  </head>
+
+  <body class="bg-gray-950 text-gray-200">
+    <!-- LANGUAGE SWITCH -->
+    <div class="fixed top-6 right-6 flex gap-2 text-sm z-50">
+      <button
+        id="btn-it"
+        onclick="setLang('it')"
+        class="px-3 py-1 border border-gray-600 rounded hover:bg-gray-800 transition lang-active"
+      >
+        IT
+      </button>
+      <button
+        id="btn-en"
+        onclick="setLang('en')"
+        class="px-3 py-1 border border-gray-600 rounded hover:bg-gray-800 transition"
+      >
+        EN
+      </button>
     </div>
-</body>
+
+    <!-- HERO -->
+    <section class="fade-in min-h-screen flex items-center px-6">
+      <div
+        class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- TESTO -->
+        <div class="text-center md:text-left">
+          <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+            Gianmaria Scorza
+          </h1>
+
+          <p
+            data-i18n="hero_subtitle"
+            class="text-xl text-gray-400 max-w-xl mb-8"
+          ></p>
+
+          <div class="flex gap-4 justify-center md:justify-start">
+            <!-- GitHub -->
+            <a
+              href="https://github.com/giamma1295"
+              class="btn-animated group bg-white text-black px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-black hover:text-white"
+            >
+              GitHub
+              <i class="fab fa-github fa-lg w-5 h-5 align-middle"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/"
+              class="btn-animated group border border-gray-600 px-6 py-3 rounded-lg flex items-center gap-2 text-gray-200 hover:bg-[#0A66C2] hover:text-white"
+            >
+              LinkedIn
+              <i class="fab fa-linkedin fa-lg w-5 h-5 align-middle"></i>
+            </a>
+
+            <!-- Email -->
+
+            <a
+              href="mailto:tuamail@example.com"
+              class="btn-animated bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-400 hover:text-black"
+            >
+              <span data-i18n="hero_email">Scrivimi</span>
+              <i
+                class="fas fa-envelope w-5 h-5 fa-lg animate-bounce align-middle"
+              ></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- IMMAGINE -->
+        <div class="flex justify-center md:justify-end">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"
+            ></div>
+            <img
+              src="assets/profile.jpg"
+              alt="Gianmaria Scorza"
+              loading="lazy"
+              class="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border border-gray-800 shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="fade-in py-20 bg-gray-900 px-6 text-center">
+      <h2 data-i18n="about_title" class="text-3xl font-bold mb-8"></h2>
+      <p
+        data-i18n="about_text"
+        class="text-gray-400 max-w-3xl mx-auto leading-relaxed"
+      ></p>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="fade-in py-20 px-6 text-center">
+      <h2 data-i18n="stack_title" class="text-3xl font-bold mb-12"></h2>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+          <h3>Backend</h3>
+          <p>Node.js, TypeScript, Functional Programming</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+          <h3>Cloud & Data</h3>
+          <p>Azure, Distributed Systems, Database Design</p>
+        </div>
+        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+          <h3>Engineering</h3>
+          <p>Clean Architecture, CI/CD, Performance & Monitoring</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="fade-in py-20 bg-gray-900 px-6 text-center">
+      <h2 data-i18n="contact_title" class="text-3xl font-bold mb-6"></h2>
+      <p data-i18n="contact_text" class="text-gray-400 mb-8"></p>
+      <a
+        href="mailto:tuamail@example.com"
+        data-i18n="contact_button"
+        class="btn-animated bg-white text-black px-6 py-3 rounded-lg font-semibold"
+      >
+      </a>
+    </section>
+
+    <footer class="py-8 text-center text-gray-500 text-sm">
+      © 2026 Gianmaria Scorza
+    </footer>
+
+    <!-- Script esterno -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
