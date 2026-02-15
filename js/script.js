@@ -33,6 +33,20 @@ const translations = {
   },
 };
 
+// --- Nuovo: traduzioni meta OpenGraph/Twitter
+const metaTags = {
+  it: {
+    ogTitle: "Gianmaria Scorza | Backend Engineer",
+    ogDescription:
+      "Backend Engineer specializzato in architetture scalabili, sistemi distribuiti e cloud engineering.",
+  },
+  en: {
+    ogTitle: "Gianmaria Scorza | Backend Engineer",
+    ogDescription:
+      "Backend Engineer specialized in scalable architectures, distributed systems, and cloud engineering.",
+  },
+};
+
 function detectLanguage() {
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get("lang")) return urlParams.get("lang");
@@ -44,16 +58,33 @@ function setLang(lang) {
   localStorage.setItem("lang", lang);
   document.documentElement.lang = lang;
 
+  // Aggiorna titolo e meta description standard
   document.getElementById("page-title").textContent = translations[lang].title;
   document
     .getElementById("meta-description")
     .setAttribute("content", translations[lang].description);
 
+  // --- Nuovo: aggiorna meta OpenGraph/Twitter
+  document
+    .getElementById("og-title")
+    .setAttribute("content", metaTags[lang].ogTitle);
+  document
+    .getElementById("og-description")
+    .setAttribute("content", metaTags[lang].ogDescription);
+  document
+    .getElementById("twitter-title")
+    .setAttribute("content", metaTags[lang].ogTitle);
+  document
+    .getElementById("twitter-description")
+    .setAttribute("content", metaTags[lang].ogDescription);
+
+  // Aggiorna testi in pagina
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     el.textContent = translations[lang][key];
   });
 
+  // Aggiorna stato pulsanti lingua
   document.getElementById("btn-it").classList.remove("lang-active");
   document.getElementById("btn-en").classList.remove("lang-active");
   document.getElementById("btn-" + lang).classList.add("lang-active");

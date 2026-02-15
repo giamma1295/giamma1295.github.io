@@ -26,22 +26,17 @@
     <!-- CSS esterno -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- OpenGraph / Social Sharing -->
-    <meta property="og:title" content="Gianmaria Scorza | Backend Engineer" />
-    <meta
-      property="og:description"
-      content="Backend Engineer specializzato in architetture scalabili, sistemi distribuiti e cloud engineering."
-    />
+    <!-- OpenGraph -->
+    <meta property="og:title" content="" id="og-title" />
+    <meta property="og:description" content="" id="og-description" />
     <meta property="og:image" content="assets/profile.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://giamma1295.github.io/" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Gianmaria Scorza | Backend Engineer" />
-    <meta
-      name="twitter:description"
-      content="Backend Engineer specializzato in architetture scalabili, sistemi distribuiti e cloud engineering."
-    />
+    <meta name="twitter:title" content="" id="twitter-title" />
+    <meta name="twitter:description" content="" id="twitter-description" />
     <meta name="twitter:image" content="assets/profile.jpg" />
   </head>
 
@@ -64,27 +59,31 @@
       </button>
     </div>
 
-    <!-- HERO -->
-    <section class="fade-in min-h-screen flex items-center px-6">
+    <!-- Hero -->
+    <section class="fade-in min-h-screen flex items-center px-4 sm:px-6">
       <div
-        class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center"
+        class="max-w-2xl sm:max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-8 sm:gap-12 items-center"
       >
         <!-- TESTO -->
         <div class="text-center md:text-left">
-          <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+          <h1
+            class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 sm:mb-6"
+          >
             Gianmaria Scorza
           </h1>
 
           <p
             data-i18n="hero_subtitle"
-            class="text-xl text-gray-400 max-w-xl mb-8"
+            class="text-lg sm:text-xl text-gray-400 max-w-xl mb-6 sm:mb-8"
           ></p>
 
-          <div class="flex gap-4 justify-center md:justify-start">
+          <div
+            class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start"
+          >
             <!-- GitHub -->
             <a
               href="https://github.com/giamma1295"
-              class="btn-animated group bg-white text-black px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-black hover:text-white"
+              class="btn-animated group bg-white text-black px-4 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-black hover:text-white"
             >
               GitHub
               <i class="fab fa-github fa-lg w-5 h-5 align-middle"></i>
@@ -93,17 +92,16 @@
             <!-- LinkedIn -->
             <a
               href="https://www.linkedin.com/"
-              class="btn-animated group border border-gray-600 px-6 py-3 rounded-lg flex items-center gap-2 text-gray-200 hover:bg-[#0A66C2] hover:text-white"
+              class="btn-animated group border border-gray-600 px-4 py-3 rounded-lg flex items-center gap-2 text-gray-200 hover:bg-[#0A66C2] hover:text-white"
             >
               LinkedIn
               <i class="fab fa-linkedin fa-lg w-5 h-5 align-middle"></i>
             </a>
 
             <!-- Email -->
-
             <a
               href="mailto:tuamail@example.com"
-              class="btn-animated bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-400 hover:text-black"
+              class="btn-animated bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-blue-400 hover:text-black"
             >
               <span data-i18n="hero_email">Scrivimi</span>
               <i
@@ -114,7 +112,7 @@
         </div>
 
         <!-- IMMAGINE -->
-        <div class="flex justify-center md:justify-end">
+        <div class="flex justify-center md:justify-end mt-6 md:mt-0">
           <div class="relative">
             <div
               class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"
@@ -123,7 +121,7 @@
               src="assets/profile.jpg"
               alt="Gianmaria Scorza"
               loading="lazy"
-              class="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border border-gray-800 shadow-2xl"
+              class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover rounded-2xl border border-gray-800 shadow-2xl"
             />
           </div>
         </div>
