@@ -15,7 +15,7 @@ const translations = {
       "Disponibile per collaborazioni su sistemi backend complessi e architetture cloud.",
     contact_button: "Scrivimi",
     privacy_note:
-      "Questo sito non utilizza cookie né raccoglie dati degli utenti.",
+      "Questo sito non utilizza cookie né raccoglie dati degli utenti. I dati di traffico possono essere raccolti da Cloudflare per sicurezza e analisi.",
   },
   en: {
     title: "Gianmaria Scorza | Backend Engineer",
@@ -32,7 +32,8 @@ const translations = {
     contact_text:
       "Available for collaborations on complex backend systems and cloud architectures.",
     contact_button: "Contact Me",
-    privacy_note: "This website does not use cookies or track user data.",
+    privacy_note:
+      "This website does not use cookies or track user data. Traffic data may be collected by Cloudflare for security and analytics purposes.",
   },
 };
 
